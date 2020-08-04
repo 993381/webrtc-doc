@@ -58,24 +58,37 @@ XMPP 突出的特点是可以和其他即时通信系统交换信息和用户在
 ## XMPP协议的组成
 
 主要的 XMPP 协议范本及当今应用很广的 XMPP 扩展:
-RFC 3920 :XMPP 核心。全称:The Extensible Messaging and Presence Protocol，即可 扩展通讯和表
-示协议。说白了，就是规定基于 XML 流传输指定节点数据的协议。这么做的好处就是统一(注:大家都 按照这个定义，做的东西就可以相互通讯、交流，这个应该很有发展前景!)。它是一个开放并且可扩展 的协议，包括 Jingle 协议都是 XMPP 协议的扩展。(注:使用 Wireshark 抓包时，早期的版本可能找不到 这个协议，这时候可以选择 Jabber，它是 XMPP 协议的前身)。现在很多的 IM 都是基于 XMPP 协议开发 的，包括 gtalk 等。定义了 XMPP 协议框架下应用的网络架构，引入了 XML Stream(XML 流)与 XML Stanza(XML 节)，并规定 XMPP 协议在通信过程中使用的 XML 标签。使用 XML 标签从根本上说是协 议开放性与扩展性的需要。此外，在通信的安全方面，把 TLS 安全传输机制与 SASL 认证机制引入到内 核，与 XMPP 进行无缝的连接，为协议的安全性、可靠性奠定了基础。核心 文档还规定了错误的定义及 处理、XML 的使用规范、JID(Jabber Identifier，Jabber 标识符)的定义、命名规范等等。所以这是所有 基于 XMPP 协议的应用都必需支持的文档。
+RFC 3920 :XMPP 核心。全称:The Extensible Messaging and Presence Protocol，即可 扩展通讯和表示协议。说白了，就是规定基于 XML 流传输指定节点数据的协议。这么做的好处就是统一(注:大家都 按照这个定义，做的东西就可以相互通讯、交流，这个应该很有发展前景!)。
+
+它是一个开放并且可扩展 的协议，包括 Jingle 协议都是 XMPP 协议的扩展。(注:使用 Wireshark 抓包时，早期的版本可能找不到 这个协议，这时候可以选择 Jabber，它是 XMPP 协议的前身)。现在很多的 IM 都是基于 XMPP 协议开发 的，包括 gtalk 等。定义了 XMPP 协议框架下应用的网络架构，引入了 XML Stream(XML 流)与 XML Stanza(XML 节)，并规定 XMPP 协议在通信过程中使用的 XML 标签。使用 XML 标签从根本上说是协 议开放性与扩展性的需要。此外，在通信的安全方面，把 TLS 安全传输机制与 SASL 认证机制引入到内 核，与 XMPP 进行无缝的连接，为协议的安全性、可靠性奠定了基础。核心 文档还规定了错误的定义及 处理、XML 的使用规范、JID(Jabber Identifier，Jabber 标识符)的定义、命名规范等等。所以这是所有 基于 XMPP 协议的应用都必需支持的文档。
+
 RFC 3921:用户成功登陆到服务器之后，发布更新自己的在线好友管理、发送即时聊天消息等业务。 所有的这些业务都是通过三种基本的 XML 节来完成的:IQ Stanza(IQ 节), Presence Stanza(Presence 节), Message Stanza(Message 节)。RFC3921 还对阻塞策略进行了定义，定义是多种阻塞方式。可以说， RFC3921 是 RFC3920 的充分补充。两个文档结合起来，就形成了一个基本的即时通信协议平台，在这个 平台上可以开发出各种各样的应用。
+
 XEP-0030 服务搜索。一个强大的用来测定 XMPP 网络中的其它实体所支持特性的协议。
+
 XEP-0115 实体性能。XEP-0030 的一个通过即时出席的定制，可以实时改变交变广告功能。
+
 XEP-0045 多人聊天。一组定义参与和管理多用户聊天室的协议，类似于 Internet 的 Relay Chat，具有 很高的安全性。
+
 XEP-0096 文件传输。定义了从一个 XMPP 实体到另一个的文件传输。
-XEP-0124 HTTP 绑定。将 XMPP 绑定到 HTTP 而不是 TCP，主要用于不能够持久的维持与服务器
-TCP 连接的设备。
+
+XEP-0124 HTTP 绑定。将 XMPP 绑定到 HTTP 而不是 TCP，主要用于不能够持久的维持与服务器TCP 连接的设备。
+
 XEP-0166 Jingle。规定了多媒体通信协商的整体架构。Jingle 协议是 XMPP 协议上的扩展协议，它着 手解决在 XMPP 协议框架下的点对点的连接问题，也即 P2P 连接。在 Jingle 框架下，即使用户在防火墙 或是 NAT 网络保护之下，也能够建立连接，从而提供文件传送、视频、音频服务等。
+
 XEP-0167 Jingle Audio Content Description Format。定义了从一个 XMPP 实体到另一个的语音传输 过程。
+
 TURN 协议:全称:Traversal Using Relays around NAT，顾名思义，就是通过中继服务器来传输数据 的协议。
+
 STUN 协议:全称:Simple Traversal of UDP over NATs，即 NAT 的 UDP 简单穿越，它允许位于 NAT(或多重 NAT)后的客户端找出自己的公网地址，查出自己位于哪种类型的 NAT 之后以及 NAT 为 某一个本地端口所绑定的 Internet 端端口。知道 NAT 类型并且有了公网 IP 和 port，P2P 就方便多了。
+
 XEP-0176 Jingle ICE(Interactive Connectivity Establishment)Transport。即 交互式连接建立，说 白了，它就是利用 STUN 和 TURN 等协议找到最适合的连接。
+
 XEP-0177 Jingle Raw UDP Transport。纯 UDP 传输机制，文件讲述了如何在没有防火墙且在同一网 络下建立连接的。
 
 XEP-0180 Jingle Video Content Description Format。定义了从一个 XMPP 实体到另一个的视频传输
 过程。
+
 XEP-0181 Jingle DTMF(Dual Tone Multi-Frequency)。 XEP-0183 Jingle Telepathy Transport Method。
 
 

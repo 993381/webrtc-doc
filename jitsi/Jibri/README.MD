@@ -10,5 +10,5 @@
 
 [相关issue](https://github.com/jitsi/jibri/issues/325)
 
-[docker多个jibri自动伸缩解决方案]:https://community.jitsi.org/t/multiple-jibri-servers-on-one-machine/27845/27
+[docker多个jibri自动伸缩解决方案](https://community.jitsi.org/t/multiple-jibri-servers-on-one-machine/27845/27) 
 

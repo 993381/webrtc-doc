@@ -5,6 +5,8 @@ WebRTC-文档，借助开源的力量，收集更多的资料和教程
 
 # [WebRTC Communtiy](https://webrtcsample.ink/) 如果在使用中遇到问题，欢迎加入我们的社区进行提问，也欢迎你在社区做出贡献
 
+## [Jitsi相关PR和文档](./jitsi/PR.md)
+
 ## [WebRTC相关文档](./webrtc/)
 
 ## [WebRTC录制视频](https://github.com/daxiondi/WebRTC-Client-Record)

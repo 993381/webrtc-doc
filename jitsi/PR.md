@@ -46,6 +46,7 @@
 - [YouTube sharing on Android ](https://github.com/jitsi/jitsi-meet/issues/5367)
 - [允许流式传输到WebRTC通用端点](https://github.com/jitsi/jitsi-meet/issues/6156)
 - [即时串流](https://github.com/jitsi/jitsi-meet/issues/5146)
+- [RTMP流](https://community.jitsi.org/t/how-do-i-change-youtube-live-stream-to-another-rtmp-server-url/24817/5)
 
 ## 新功能
 - [Jibri新增列队支持](https://github.com/jitsi/jitsi-meet/commit/8defa40fe4764d1f3aab023e9bb4e84bb4b8b16d)
